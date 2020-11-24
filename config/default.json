@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://jchen:Elysium1996@cluster0.ucej0.mongodb.net/UrlShortenerApp?retryWrites=true&w=majority",
+    "baseUrl" : "http://localhost:5000"
+}
