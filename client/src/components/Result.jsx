@@ -12,7 +12,7 @@ const Result = props => {
     const { isSuccess, msg, data } = location.state || {};
     const {longUrl, shortUrl, urlCode, date} = data || {};
     if(redirect){
-        return <Redirect to={'/' + urlCode + '/edit'}/>;
+        return <Redirect to={'/url/' + urlCode + '/edit'}/>;
     }
     return(
         <>

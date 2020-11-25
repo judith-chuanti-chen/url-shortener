@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const urlModel = require('../models/url.schema');
+const path = require('path');
 
 router.get('/:urlCode', async (req, res) =>{
     const urlCode = req.params.urlCode;
@@ -17,4 +18,12 @@ router.get('/:urlCode', async (req, res) =>{
         return res.status(500).json('Server error');
     }
 });
+
+if (process.env.NODE_ENV === "production"){
+    router.get("/*", (req, res) => {
+        console.log('Works');
+      res.sendFile(path.resolve(__dirname, "../client", "build", "index.html"));
+    });
+}
+
 module.exports = router;
