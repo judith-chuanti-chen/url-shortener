@@ -68,7 +68,7 @@ router.post('/create', async (req, res) =>{
   
     // console.log("About to create new url!");
     const urlCode = customString || shortId.generate();
-    let shortUrl = baseUrl + '/' + urlCode;
+    let shortUrl = baseUrl + '/url/' + urlCode;
     const url = {
         longUrl,
         shortUrl,

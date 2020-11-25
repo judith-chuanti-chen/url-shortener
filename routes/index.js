@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const urlModel = require('../models/url.schema');
 
-router.get('/:urlCode', async (req, res) =>{
+router.get('/url/:urlCode', async (req, res) =>{
     const urlCode = req.params.urlCode;
     try{
         const resultUrl = await urlModel.findOne({ urlCode });
