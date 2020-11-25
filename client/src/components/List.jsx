@@ -23,7 +23,7 @@ const List = () => {
     };
 
     const handleEdit = (urlCode) => {
-        setRedirect({path: '/' + urlCode + '/edit'});
+        setRedirect({path: '/url/' + urlCode + '/edit'});
     };
     useEffect(() =>{
         getAll();
@@ -40,12 +40,12 @@ const List = () => {
     return(
         <>
             <Wrapper>
-            <div class="row py-5">
-                <div class="col-lg-10 mx-auto">
-                <div class="card rounded shadow border-0">
-                    <div class="card-body bg-white rounded">
-                    <div class="table-responsive">
-                        <table id="example"  class="table table-striped table-bordered">
+            <div className="row py-5">
+                <div className="col-lg-10 mx-auto">
+                <div className="card rounded shadow border-0">
+                    <div className="card-body bg-white rounded">
+                    <div className="table-responsive">
+                        <table id="example"  className="table table-striped table-bordered">
                             <thead className="thead-light">
                                 <tr>
                                     <th>Long URL</th>

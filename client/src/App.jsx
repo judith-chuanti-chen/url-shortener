@@ -19,7 +19,7 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/:urlCode/edit" >
+          <Route exact path="/url/:urlCode/edit" >
             <Wrapper><Edit /></Wrapper>
           </Route>
           <Route exact path="/unknown-error" component={UnknownError} />

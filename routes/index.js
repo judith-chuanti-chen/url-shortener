@@ -7,6 +7,7 @@ router.get('/:urlCode', async (req, res) =>{
     try{
         const resultUrl = await urlModel.findOne({ urlCode });
         if(resultUrl){
+            console.log("redirecting to" + resultUrl.longUrl);
             res.redirect(resultUrl.longUrl);
         }else{
             return res.status(404).json('Cannot find urlCode');
