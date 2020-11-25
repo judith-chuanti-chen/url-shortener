@@ -1,16 +1,16 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 const config = require('config');
 const mongoDB = config.get('mongoURI');
 
 const connectDB = () => {
-    mongoose.connect(mongoDB , {
+    mongoose.connect(mongoDB, {
         useNewUrlParser: true,
-        useUnifiedTopology: true
+        useUnifiedTopology: true,
     });
     console.log('MongoDB Connected');
     let db = mongoose.connection;
     db.on('error', console.error.bind(console, 'MongoDB connection error:'));
-}
+};
 
 // const connectDB = async () => {
 //     try{
